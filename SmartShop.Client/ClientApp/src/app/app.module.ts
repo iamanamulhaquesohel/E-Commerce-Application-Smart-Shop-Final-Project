@@ -67,8 +67,16 @@ import { ProductService } from './services/data/product.service';
 import { ConfigLabelComponent } from './components/subcategory/config-label/config-label.component';
 import { ProductConfigService } from './services/data/product-config.service';
 import { DecimalPipe } from '@angular/common';
-
-
+import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import { ProductInfoComponent } from './components/product/product-info/product-info.component';
+import { NgImageSliderModule } from 'ng-image-slider';
+import { OrderViewComponent } from './components/order/order-view/order-view.component';
+import { OrderService } from './services/data/order.service';
+import { OrderSummaryComponent } from './components/order/order-summary/order-summary.component';
+import { PaymentService } from './services/data/payment.service';
+import { PaymentCreateComponent } from './components/payment/payment-create/payment-create.component';
+import { PaymentEditComponent } from './components/payment/payment-edit/payment-edit.component';
+import { PaymentViewComponent } from './components/payment/payment-view/payment-view.component';
 
 @NgModule({
   declarations: [
@@ -102,7 +110,13 @@ import { DecimalPipe } from '@angular/common';
     ProductCreateComponent,
     ProductEditComponent,
     BrandProductComponent,
-    ConfigLabelComponent
+    ConfigLabelComponent,
+    ProductInfoComponent,
+    OrderViewComponent,
+    OrderSummaryComponent,
+    PaymentCreateComponent,
+    PaymentEditComponent,
+    PaymentViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -114,8 +128,11 @@ import { DecimalPipe } from '@angular/common';
     RouterModule,
     HttpClientModule,
     NgMaterialMultilevelMenuModule,
+    NgxMatFileInputModule,
+    NgImageSliderModule,
     MatImportModule,
     MatNativeDateModule
+   
   ],
   entryComponents: [ConfirmDialogComponent],
   providers: [
@@ -136,6 +153,8 @@ import { DecimalPipe } from '@angular/common';
     SignalrService,
     ProductService,
     ProductConfigService,
+    OrderService,
+    PaymentService,
     AuthGuard,
     SignalrService, {
       provide: APP_INITIALIZER, useFactory: (svc: SignalrService) => () => svc.initiateConnection(),

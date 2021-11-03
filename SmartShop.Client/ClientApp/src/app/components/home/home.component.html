@@ -10,14 +10,18 @@
   <div class="card-container">
     <h2>Resources</h2>
     <div class="link-container">
-      <a [routerLink]="['/products']" class="card-link"
-     >Products <mat-icon class="link-icon">chevron_right</mat-icon></a>
-      <a [routerLink]="['/brands']" class="card-link"  ><span matBadgeOverlap="false" matBadge="8" matBadgePosition="before"  matBadgeColor="accent" [matBadgeHidden]="false">Brands</span> <mat-icon class="link-icon">chevron_right</mat-icon></a>
-      <a href="#" class="card-link">Categories <mat-icon class="link-icon">chevron_right</mat-icon></a>
-      <a href="#" class="card-link">Subcategories <mat-icon class="link-icon">chevron_right</mat-icon></a>
-      <a href="#" class="card-link">Sizes <mat-icon class="link-icon">chevron_right</mat-icon></a>
-      <a href="#" class="card-link">Colors <mat-icon class="link-icon">chevron_right</mat-icon></a>
-      <a href="#" class="card-link">Normal products <mat-icon class="link-icon">chevron_right</mat-icon></a>
+      <a [routerLink]="['/orders']" class="card-link">
+        <span matBadgeOverlap="false" [matBadge]="pendingOrders" matBadgePosition="before" matBadgeColor="accent" [matBadgeHidden]="false" *ngIf="pendingOrders>0">Orders</span>
+        <span *ngIf="pendingOrders==0">Orders</span>
+        <mat-icon class="link-icon">chevron_right</mat-icon>
+      </a>
+      <a [routerLink]="['/products']" class="card-link">Products <mat-icon class="link-icon">chevron_right</mat-icon></a>
+      <a [routerLink]="['/brands']" class="card-link"><span>Brands</span> <mat-icon class="link-icon">chevron_right</mat-icon></a>
+      <a [routerLink]="['/categories']"  class="card-link">Categories <mat-icon class="link-icon">chevron_right</mat-icon></a>
+      <a [routerLink]="['/subcategories']" class="card-link">Subcategories <mat-icon class="link-icon">chevron_right</mat-icon></a>
+      <a [routerLink]="['/sizes']" class="card-link">Sizes <mat-icon class="link-icon">chevron_right</mat-icon></a>
+      <a [routerLink]="['/home']" class="card-link">Colors <mat-icon class="link-icon">chevron_right</mat-icon></a>
+      <a [routerLink]="['/products']" class="card-link">Normal products <mat-icon class="link-icon">chevron_right</mat-icon></a>
     </div>
   </div>
   <mat-divider></mat-divider>
@@ -25,9 +29,9 @@
     <h2>Control</h2>
 
     <div class="link-container">
-      <a class="card-link" mat-raised-button><mat-icon class="link-icon">add</mat-icon>Warehouse</a>
+      <a [routerLink]="['/shipping']" class="card-link" mat-raised-button><mat-icon class="link-icon">add</mat-icon>Warehouse</a>
       <a class="card-link" mat-button [routerLink]="['/users']" ><mat-icon class="link-icon">add</mat-icon>Uers</a>
-      <a href="#" class="card-link" mat-button><mat-icon class="link-icon">add</mat-icon>Mails</a>
+      <a [routerLink]="['/customers']" class="card-link" mat-button><mat-icon class="link-icon">add</mat-icon>Customer List</a>
 
     </div>
   </div>

@@ -1,5 +1,6 @@
 export class AppConstants {
   static apiUrl = "http://localhost:5000";
+  static webUrl = "http://localhost:5001";
   static appName = "Shop Smart";
   static navItems = [
     {
@@ -35,6 +36,11 @@ export class AppConstants {
           label: "Shipping",
           icon: "local_shipping",
           link: "/shipping"
+        },
+        {
+          label: 'Payment modes',
+          icon: 'payments',
+          link: '/payments'
         }
       ]
     },
@@ -66,6 +72,11 @@ export class AppConstants {
         }
 
       ]
+    },
+    {
+      "label": "Orders",
+      "icon": "shopping_cart_checkout",
+      "link": "/orders"
     },
     {
       "label": "Users",

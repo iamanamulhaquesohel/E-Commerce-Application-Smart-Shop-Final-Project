@@ -8,7 +8,6 @@ namespace SmartShop.DataApi.ViewModels.Identity
 {
     public class UserDataViewModel
     {
-       
         public string Id { get; set; }
         [Required, StringLength(30)]
         public string Username { get; set; }

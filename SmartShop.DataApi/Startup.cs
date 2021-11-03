@@ -9,6 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using SmartShop.DataApi.HostedServices;
 using SmartShop.DataApi.Hubs;
 using SmartShop.DataApi.Models.Identity;
 using SmartShop.DataLib.Models.Data;
@@ -50,6 +51,11 @@ namespace SmartShop.DataApi
                     });
             });
             #endregion
+            #region identity seederservice injectors
+
+            services.AddScoped<IdentityDbInitializer>();
+            services.AddHostedService<SetupIdentityDataSeeder>();
+            #endregion
             #region Identy Configurations
             services.AddIdentity<IdentityUser, IdentityRole>(option =>
             {
@@ -62,7 +68,7 @@ namespace SmartShop.DataApi
             .AddEntityFrameworkStores<AppDbContext>()
             .AddDefaultTokenProviders();
             #endregion
-            #region Authentication/JWT Configuration
+            #region Authentication/JWTBearer Configuration
             services.AddAuthentication(option =>
             {
                 option.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -83,11 +89,16 @@ namespace SmartShop.DataApi
                     };
                 });
             #endregion
-            services.AddControllersWithViews().AddNewtonsoftJson(option => {
-                option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Serialize;
-                option.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
-            });
+            #region MVC Middleware Servece
+            services.AddControllersWithViews()
+                .AddNewtonsoftJson(option => {
+                    option.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Serialize;
+                    option.SerializerSettings.PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.Objects;
+                });
+            #endregion
+            #region SignalR Service
             services.AddSignalR();
+            #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
