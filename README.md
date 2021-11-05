@@ -1,26 +1,26 @@
 # E-Commerce-Smart-Shop-Final-Project
-#SmartShop
+# SmartShop
 A Ecommerce site Made with ASP .NET Core , ASP .NET Web API & Angular
 
-#Technologies at glance
+# Technologies at glance
 Frontend Technologies
 JavaScript
 Angular
 TypeScript
 SignalR
 
-#Backend / API Technologies
+# Backend / API Technologies
 ASP .NET Core Web API
 ASP .NET Core
 EntityFrameworkCore
 SignalR
 
-#Requirement
+# Requirement
 1. Install node js
 2. Visual Studio Code 2019
 3. Install dotnet ef global tool using this command dotnet tool install --global dotnet-ef
 
-#Installation guide
+# Installation guide
 1. Download the repositories.
 2. Open the SmartShop.DataApi project in the command prompt & write the below command.
 3. Add migration for SmartShopDbContext - dotnet ef migrations add "SS_v0" --project ..\SmartShop.DataLib\SmartShop.DataLib.csproj --startup-project .\SmartShop.DataApi.csproj -c SmartShopDbContext
