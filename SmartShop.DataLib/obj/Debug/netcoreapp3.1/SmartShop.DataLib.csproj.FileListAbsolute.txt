@@ -21,5 +21,4 @@ D:\Document Data\IDB\Projects\E-Commerce\Complete Project Final Update\SmartShop
 D:\Document Data\IDB\Projects\E-Commerce\Complete Project Final Update\SmartShop.DataLib\obj\Debug\netcoreapp3.1\SmartShop.DataLib.dll
 D:\Document Data\IDB\Projects\E-Commerce\Complete Project Final Update\SmartShop.DataLib\obj\Debug\netcoreapp3.1\SmartShop.DataLib.pdb
 D:\Document Data\IDB\Projects\E-Commerce\Complete Project Final Update\SmartShop.DataLib\obj\Debug\netcoreapp3.1\SmartShop.DataLib.genruntimeconfig.cache
-D:\Document Data\IDB\Projects\E-Commerce\Complete Project Final Update\SmartShop.DataLib\obj\Debug\netcoreapp3.1\SmartShop.DataLib.csproj.AssemblyReference.cache
-D:\Document Data\IDB\Projects\E-Commerce\Complete Project Final Update\SmartShop.DataLib\obj\Debug\netcoreapp3.1\SmartShop.DataLib.GeneratedMSBuildEditorConfig.editorconfig
+D:\Document Data\IDB\Projects\E-Commerce\Complete Project Final Update\SmartShop.DataLib\obj\Debug\netcoreapp3.1\SmartShop.DataLib.csprojAssemblyReference.cache

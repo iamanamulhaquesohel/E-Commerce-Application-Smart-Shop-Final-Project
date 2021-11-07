@@ -1,1 +1,1 @@
-dotnet ef database update -c AppDbContext 
+dotnet ef database update -c AppDbContext
