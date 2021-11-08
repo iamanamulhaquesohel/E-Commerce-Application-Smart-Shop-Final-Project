@@ -42,7 +42,7 @@ export class CategoryViewComponent implements OnInit {
   getSubcategories(data: CategoryModel) {
     return data
       .subcategories?.map(x => `<span>${x.subcategoryName}</span>`)
-      .join(' ')
+      .join(', ')
   }
   /*
    * Handlers

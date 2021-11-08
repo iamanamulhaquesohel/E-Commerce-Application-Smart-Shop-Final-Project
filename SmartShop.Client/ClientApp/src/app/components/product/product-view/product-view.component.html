@@ -13,7 +13,7 @@
       <mat-table [dataSource]="dataSource" matSort>
 
         <ng-container matColumnDef="pic">
-          <mat-header-cell *matHeaderCellDef></mat-header-cell>
+          <mat-header-cell *matHeaderCellDef>Product Picture</mat-header-cell>
           <mat-cell *matCellDef="let element">
             <img src="{{getImage(element)}}" class="circle-image" style="width:40px" />
           </mat-cell>
@@ -27,7 +27,7 @@
           <mat-cell *matCellDef="let element">{{getPrice(element)}}</mat-cell>
         </ng-container>
         <ng-container matColumnDef="details">
-          <mat-header-cell *matHeaderCellDef>View details</mat-header-cell>
+          <mat-header-cell *matHeaderCellDef>View Details</mat-header-cell>
           <mat-cell *matCellDef="let element"><a mat-stroked-button [routerLink]="['/product-info', element.productId]"><mat-icon>info</mat-icon> details</a></mat-cell>
         </ng-container>
         <ng-container matColumnDef="actions">
